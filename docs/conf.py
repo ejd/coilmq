@@ -24,6 +24,9 @@ extensions = [
     "sphinx_paramlinks",
 ]
 
+primary_domain = "py"
+default_role = "py:obj"
+
 exclude_patterns = [
     ".DS_Store",
     ".gitignoreThumbs.db",
