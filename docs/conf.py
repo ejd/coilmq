@@ -20,6 +20,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx_autodoc_typehints",
+    "sphinx_issues",
     "sphinx_paramlinks",
 ]
 
@@ -51,3 +52,8 @@ autosectionlabel_prefix_document = True
 # https://pypi.org/project/sphinx-paramlinks/#configuration
 
 paramlinks_hyperlink_param = "name"
+
+# -- Options for sphinx-issues extension -------------------------------------
+# https://github.com/sloria/sphinx-issues
+
+issues_github_path = "hozn/coilmq"
