@@ -29,9 +29,9 @@ v1.0.0
 
 v0.6.1
 ------
-* Error with one subscriber causes topic messages not to be delivered to 
+* Error with one subscriber causes topic messages not to be delivered to
   other subscribers (issue 33).
-* Fixed error in some circumstances when clearing pending transaction 
+* Fixed error in some circumstances when clearing pending transaction
   frames with commit/abort (issue 30).
 * Fixed incorrect default address in help (issue 29).
 
@@ -39,14 +39,14 @@ v0.6.0
 ------
 * Added a new diagnostic thread that will run when --debug option
   is passed on the commandline.
-* Added method to QueueManager API  to support tracking subscriber count. 
+* Added method to QueueManager API  to support tracking subscriber count.
 * Improved unit and functional test coverage of storage engines.
-* Fixed bug in engine.commit() and updated tests to catch previous 
+* Fixed bug in engine.commit() and updated tests to catch previous
   failure (issue 28).
 
 v0.5.0
 ------
-* Added support for RECEIPT header and server messages (issue 26). 
+* Added support for RECEIPT header and server messages (issue 26).
 
 v0.4.4
 ------
@@ -64,8 +64,8 @@ v0.4.3
 v0.4.2
 ------
 * Added allow_socket_reuse (SO_REUSEADDR) option to SocketServer subclass
-  to avoid having to wait to restart server after unclean client 
-  disconnect. 
+  to avoid having to wait to restart server after unclean client
+  disconnect.
 
 v0.4.1
 ------
