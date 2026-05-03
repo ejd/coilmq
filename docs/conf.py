@@ -2,6 +2,7 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+import importlib.metadata
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -9,6 +10,8 @@
 project = "coilmq"
 copyright = "2009 - 2026, Hans Lellelid"
 author = "Hans Lellelid"
+
+version = release = importlib.metadata.version("coilmq")
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
