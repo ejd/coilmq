@@ -279,6 +279,7 @@ docs = [
     { name = "furo", marker = "python_full_version >= '3.13'" },
     { name = "sphinx", marker = "python_full_version >= '3.13'" },
     { name = "sphinx-autodoc-typehints", marker = "python_full_version >= '3.13'" },
+    { name = "sphinx-issues", marker = "python_full_version >= '3.13'" },
     { name = "sphinx-paramlinks", marker = "python_full_version >= '3.13'" },
 ]
 tests = [
@@ -318,6 +319,7 @@ docs = [
     { name = "furo", marker = "python_full_version >= '3.13'", specifier = ">=2025.12.19" },
     { name = "sphinx", marker = "python_full_version >= '3.13'", specifier = ">=9.1.0" },
     { name = "sphinx-autodoc-typehints", marker = "python_full_version >= '3.13'", specifier = ">=3.9.11" },
+    { name = "sphinx-issues", marker = "python_full_version >= '3.13'", specifier = ">=6.0.0" },
     { name = "sphinx-paramlinks", marker = "python_full_version >= '3.13'", specifier = ">=0.6.0" },
 ]
 tests = [
@@ -1413,6 +1415,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/98/0b/a866924ded68efec7a1759587a4e478aec7559d8165fac8b2ad1c0e774d6/sphinx_basic_ng-1.0.0b2.tar.gz", hash = "sha256:9ec55a47c90c8c002b5960c57492ec3021f5193cb26cebc2dc4ea226848651c9", size = 20736, upload-time = "2023-07-08T18:40:54.166Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3c/dd/018ce05c532a22007ac58d4f45232514cd9d6dd0ee1dc374e309db830983/sphinx_basic_ng-1.0.0b2-py3-none-any.whl", hash = "sha256:eb09aedbabfb650607e9b4b68c9d240b90b1e1be221d6ad71d61c52e29f7932b", size = 22496, upload-time = "2023-07-08T18:40:52.659Z" },
+]
+
+[[package]]
+name = "sphinx-issues"
+version = "6.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sphinx", marker = "python_full_version >= '3.13'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/95/4e/c9a46b19c90d4d3cdcbcaf0e4d392b09e5b41ec75b134bc5a1aa192be94f/sphinx_issues-6.0.0.tar.gz", hash = "sha256:f40f2c71cecb2068c7f06a53825778b674d58d8395b4ea60551a36164d2988e3", size = 15230, upload-time = "2026-03-13T17:23:32.501Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/29/8a/28333d222ac31539aa0d818db0790077e5a6a408f933b4bf64f7d3440ffc/sphinx_issues-6.0.0-py3-none-any.whl", hash = "sha256:c7ed2915059526d02022733985a7712d4b2b64a707e16b98294ed9758e64df4f", size = 8362, upload-time = "2026-03-13T17:23:31.031Z" },
 ]
 
 [[package]]

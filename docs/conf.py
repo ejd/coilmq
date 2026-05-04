@@ -2,6 +2,7 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+import importlib.metadata
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -9,6 +10,8 @@
 project = "coilmq"
 copyright = "2009 - 2026, Hans Lellelid"
 author = "Hans Lellelid"
+
+version = release = importlib.metadata.version("coilmq")
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -20,8 +23,12 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx_autodoc_typehints",
+    "sphinx_issues",
     "sphinx_paramlinks",
 ]
+
+primary_domain = "py"
+default_role = "py:obj"
 
 exclude_patterns = [
     ".DS_Store",
@@ -51,3 +58,8 @@ autosectionlabel_prefix_document = True
 # https://pypi.org/project/sphinx-paramlinks/#configuration
 
 paramlinks_hyperlink_param = "name"
+
+# -- Options for sphinx-issues extension -------------------------------------
+# https://github.com/sloria/sphinx-issues
+
+issues_github_path = "hozn/coilmq"
