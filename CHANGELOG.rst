@@ -4,22 +4,28 @@
 
 Unreleased
 ----------
-* Removed uses of `pkg_resources` (issue 39)
-* Removed support for Python 2.7 through Python 3.7 (MR 37)
-* Fixed a defect in `coilmq.util.frames.FrameBuffer.extract_frame`: on
-  an `IncompleteFrame` error, this method set the buffer's next write
-  index to the read index (rather than the end of the buffer) causing
-  the subsequent `FrameBuffer.append()` call(s) to overwrite the
-  beginning of the frame and hanging the server (issue 44)
-* Fixed defects in CoilMQ's heart-beating implementation (issue 26)
-  * stop heart-beating threads when a connection closes
-  * treat any incoming traffic as a heart-beat
-  * tolerate heart-beats arriving as late as twice the requested interval
-* ``QueuePriorityScheduler`` is now a subclasses of ``abc.ABC``;
-  ``QueuePriorityScheduler.choice()`` is now an ``abc.abstractmethod``
-  (issue 53)
-* Use ``importlib.resources`` to load the default configuration
-  (issue 56)
+
+**Changed**
+
+- dropped support for Python 2.7 through Python 3.7 (:pr:`37`)
+- refactor tests to idiomatic pytest style (:pr:`66`)
+- use Sphinx markup for documentation (:pr:`52`)
+- format project code with ruff (:issue:`58`)
+
+**Fixed**
+
+- CoilMQ rejects CONNECT without accept-version header (:issue:`29`)
+- subscription id not returned to client (:issue:`25`)
+- error in ACK processing in version 1.1 protocol (:issue:`34`)
+- STOMP commands and header names should be case sensitive (:issue:`23`)
+- remove ``pkg_resources`` dependency (:issue:`39`)
+- CI builds are no longer running (:issue:`31`)
+- command line argument parsing with click 8 (:pr:`28`)
+- large messages corrupt `~coilmq.util.frames.FrameBuffer` and hang server (:issue:`44`)
+- heart-beat mechanism makes CoilMQ unusable with heartbeats enabled (:issue:`26`)
+- `~coilmq.scheduler.QueuePriorityScheduler` should be an abstract base class (:issue:`53`)
+- use `importlib.resources` to load the default configuration (:issue:`56`)
+- pytest treats ``TestStompServer`` and ``TestStompClient`` as test cases (:issue:`62`)
 
 v1.0.1
 ------
