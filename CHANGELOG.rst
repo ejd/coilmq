@@ -38,7 +38,7 @@ v0.6.1
 v0.6.0
 ------
 * Added a new diagnostic thread that will run when --debug option
-  is passed on the commandline.
+  is passed on the command line.
 * Added method to QueueManager API  to support tracking subscriber count.
 * Improved unit and functional test coverage of storage engines.
 * Fixed bug in engine.commit() and updated tests to catch previous
