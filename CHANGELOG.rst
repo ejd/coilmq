@@ -27,6 +27,24 @@ v1.0.1
 v1.0.0
 ------
 
+CoilMQ moved from Google Code to GitHub during the development of v1.0.0.  This section
+(and those above) refers to issues and PRs opened against CoilMQ on GitHub.  Sections
+for older releases (below) refer to issues opened against the `project on Google Code`_.
+
+.. _project on Google Code: https://code.google.com/archive/p/coilmq/issues
+
+**Added**
+
+- Python 3 support (:pr:`3`)
+- STOMP 1.1 support (:pr:`12`)
+- STOMP 1.2 support (:pr:`13`)
+- support for ``STOMP`` command (:pr:`14`)
+- `QueueStore` implementation backed by a Redis database (:pr:`15`)
+
+**Fixed**
+
+- show correct exception on TCPServer init error (:pr:`1`)
+
 v0.6.1
 ------
 * Error with one subscriber causes topic messages not to be delivered to
