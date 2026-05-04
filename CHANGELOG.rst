@@ -24,6 +24,11 @@ Unreleased
 v1.0.1
 ------
 
+**Fixed**
+
+- ImportError: No module named 'pwd' (:issue:`20`)
+- replace `NotImplemented` with `NotImplementedError` (:pr:`18`)
+
 v1.0.0
 ------
 
