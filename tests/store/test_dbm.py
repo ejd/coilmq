@@ -1,18 +1,23 @@
 """Test DBM queue storage."""
 
+from __future__ import annotations
+
 import time
 import uuid
 from contextlib import closing
-from pathlib import Path
-from typing import Generator
+from typing import TYPE_CHECKING, Generator
 
 import pytest
 
-from coilmq.store import QueueStore
 from coilmq.store.dbm import DbmQueue
 from coilmq.util import frames
 from coilmq.util.frames import Frame
 from tests.store import BaseQueueTests
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from coilmq.store import QueueStore
 
 __authors__ = ['"Hans Lellelid" <hans@xmpl.org>']
 __copyright__ = "Copyright 2009 Hans Lellelid"

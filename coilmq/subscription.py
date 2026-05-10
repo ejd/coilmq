@@ -1,9 +1,12 @@
+from __future__ import annotations
+
 import itertools
 from collections import defaultdict
 from dataclasses import dataclass
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-from coilmq.server import StompConnection
+if TYPE_CHECKING:
+    from coilmq.server import StompConnection
 
 DEFAULT_SUBSCRIPTION_ID = 0
 

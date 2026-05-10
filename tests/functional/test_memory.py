@@ -6,14 +6,17 @@ from __future__ import annotations
 
 import zlib
 from queue import Empty
+from typing import TYPE_CHECKING
 
 import pytest
 
 from coilmq.auth.simple import SimpleAuthenticator
-from coilmq.server.socket_server import ThreadedStompServer
 from coilmq.store.memory import MemoryQueue
 from coilmq.util import frames
-from tests.functional import Client
+
+if TYPE_CHECKING:
+    from coilmq.server.socket_server import ThreadedStompServer
+    from tests.functional import Client
 
 __authors__ = ['"Hans Lellelid" <hans@xmpl.org>']
 __copyright__ = "Copyright 2009 Hans Lellelid"

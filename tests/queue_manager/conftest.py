@@ -1,10 +1,14 @@
-from typing import Generator
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, Generator
 
 import pytest
 
 from coilmq.queue import QueueManager
-from coilmq.store import QueueStore
 from tests.mock import MockConnection
+
+if TYPE_CHECKING:
+    from coilmq.store import QueueStore
 
 
 @pytest.fixture

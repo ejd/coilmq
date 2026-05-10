@@ -1,15 +1,20 @@
 """Tests for queue-related classes."""
 
+from __future__ import annotations
+
 import re
 import uuid
+from typing import TYPE_CHECKING
 
 import pytest
 
-from coilmq.queue import QueueManager
-from coilmq.store import QueueStore
 from coilmq.util import frames
 from coilmq.util.frames import Frame
 from tests.mock import MockConnection
+
+if TYPE_CHECKING:
+    from coilmq.queue import QueueManager
+    from coilmq.store import QueueStore
 
 __authors__ = ['"Hans Lellelid" <hans@xmpl.org>']
 __copyright__ = "Copyright 2009 Hans Lellelid"
