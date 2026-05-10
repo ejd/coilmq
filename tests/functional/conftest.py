@@ -1,18 +1,20 @@
 from __future__ import annotations
 
 import threading
-from typing import Generator
+from typing import TYPE_CHECKING, Generator
 
 import pytest
 
-from coilmq.auth import Authenticator
 from coilmq.protocol import STOMP10
 from coilmq.queue import QueueManager
 from coilmq.scheduler import FavorReliableSubscriberScheduler, RandomQueueScheduler
 from coilmq.server.socket_server import ThreadedStompServer
-from coilmq.store import QueueStore
 from coilmq.topic import TopicManager
 from tests.functional import Client
+
+if TYPE_CHECKING:
+    from coilmq.auth import Authenticator
+    from coilmq.store import QueueStore
 
 
 @pytest.fixture

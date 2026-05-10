@@ -2,11 +2,10 @@
 
 from __future__ import annotations
 
-from typing import Generator
+from typing import TYPE_CHECKING, Generator
 
 import pytest
 
-from coilmq.auth import Authenticator
 from coilmq.engine import StompEngine
 from coilmq.util import frames
 from coilmq.util.frames import Frame, ReceiptFrame
@@ -16,6 +15,9 @@ from tests.mock import (
     MockQueueManager,
     MockTopicManager,
 )
+
+if TYPE_CHECKING:
+    from coilmq.auth import Authenticator
 
 __authors__ = ['"Hans Lellelid" <hans@xmpl.org>']
 __copyright__ = "Copyright 2009 Hans Lellelid"

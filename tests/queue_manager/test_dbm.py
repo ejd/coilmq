@@ -1,11 +1,16 @@
 """Test of the QueueManager when using a DBM backend (store)."""
 
-from pathlib import Path
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 import pytest
 
 from coilmq.store.dbm import DbmQueue
 from tests.queue_manager import QueueManagerTests
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 __authors__ = ['"Hans Lellelid" <hans@xmpl.org>']
 __copyright__ = "Copyright 2009 Hans Lellelid"

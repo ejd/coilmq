@@ -1,10 +1,15 @@
 """Queue storage tests."""
 
-import uuid
+from __future__ import annotations
 
-from coilmq.store import QueueStore
+import uuid
+from typing import TYPE_CHECKING
+
 from coilmq.util import frames
 from coilmq.util.frames import Frame
+
+if TYPE_CHECKING:
+    from coilmq.store import QueueStore
 
 __authors__ = ['"Hans Lellelid" <hans@xmpl.org>']
 __copyright__ = "Copyright 2009 Hans Lellelid"
