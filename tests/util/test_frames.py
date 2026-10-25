@@ -23,10 +23,9 @@ from coilmq.util.frames import (
             ("BEGIN", OrderedDict([("transaction", "tx1")])),
         ),
         # The following case demonstrates https://github.com/coilmq/coilmq/issues/99:
-        pytest.param(
+        (
             b"SEND\ndestination:/queue/foo\n foo : bar \n\n\x00",
             ("SEND", OrderedDict([("destination", "/queue/foo"), (" foo ", " bar ")])),
-            marks=[pytest.mark.xfail],
         ),
     ],
 )
